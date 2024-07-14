@@ -1,3 +1,7 @@
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js'
+// import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js'    
+
 function CreateAccount(){
   const [show, setShow]     = React.useState(true);
   const [status, setStatus] = React.useState('');
@@ -29,13 +33,25 @@ function CreateForm(props){
   const [password, setPassword] = React.useState('');
 
   function handle(){
-    console.log(name,email,password);
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        console.log("successfully signed up as " + user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("error code: " + error.code + ", error message: " + error.message)
+      });
+    /* console.log(name,email,password);
     const url = `/account/create/${name}/${email}/${password}`;
     (async () => {
         var res  = await fetch(url);
         var data = await res.json();    
         console.log(data);        
-    })();
+    })(); */
     props.setShow(false);
   }    
 
@@ -69,17 +85,3 @@ function CreateForm(props){
   </>);
 }
 
-/* import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  }); */

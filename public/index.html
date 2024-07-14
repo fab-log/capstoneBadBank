@@ -2,8 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Template</title>
+    <title>Bad Bank</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="bank.png">
 
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyB16ksq__AzDimVMiV8wFK7lU2_JYDnqHc",
+        authDomain: "bad-bank-66dd7.firebaseapp.com",
+        projectId: "bad-bank-66dd7",
+        storageBucket: "bad-bank-66dd7.appspot.com",
+        messagingSenderId: "903319387847",
+        appId: "1:903319387847:web:1323b32c504da71a3308e2"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -39,23 +56,6 @@
     <script src="alldata.js" defer type="text/babel"></script>
     <script src="home.js" defer type="text/babel"></script>
     <script src="index.js" defer type="text/babel"></script>
-
-    <!-- FIREBASE -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-      const firebaseConfig = {
-        apiKey: "AIzaSyB16ksq__AzDimVMiV8wFK7lU2_JYDnqHc",
-        authDomain: "bad-bank-66dd7.firebaseapp.com",
-        projectId: "bad-bank-66dd7",
-        storageBucket: "bad-bank-66dd7.appspot.com",
-        messagingSenderId: "903319387847",
-        appId: "1:903319387847:web:1323b32c504da71a3308e2"
-      };
-      firebase.initializeApp(firebaseConfig);
-    </script>
 
   </body>
 </html>
