@@ -5,34 +5,21 @@
     <title>Bad Bank</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="bank.png">
 
-    <!-- FIREBASE -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-      const firebaseConfig = {
-        apiKey: "",
-        authDomain: "",
-        projectId: "",
-        storageBucket: "",
-        messagingSenderId: "",
-        appId: ""
-      };
-      firebase.initializeApp(firebaseConfig);
-    </script>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+    <!-- FIREBASE -->
+     <script type="module" src="firebase.js"></script>
+
     <style>
       body {
         background-color: hsl(0, 0%, 12%);
       }
     </style>
-    
+
   </head>
   <body>
     <!-- we will put our teact component inside this div -->
@@ -56,6 +43,7 @@
     <script src="alldata.js" defer type="text/babel"></script>
     <script src="home.js" defer type="text/babel"></script>
     <script src="index.js" defer type="text/babel"></script>
+
 
   </body>
 </html>
