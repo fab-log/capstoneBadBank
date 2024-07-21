@@ -34,4 +34,4 @@ createUserWithEmailAndPassword(auth, email, password)
     console.log("error code: " + errorCode + ", error message: " + errorMessage);
   });
 
-module.exports = {currentUser};
+// module.exports = {currentUser};
